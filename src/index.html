@@ -12,10 +12,20 @@
     />
   </head>
   <body>
-    <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
-    <include src="./partials/example.html"></include>
+    <div class="search-box">
+      <label for="searchQuery" class="sr-only">Поиск страны</label>
+      <input
+        type="text"
+        class="form-control"
+        name="query"
+        id="searchQuery"
+        placeholder="Введите страну"
+        autocomplete="off"
+      />
+    </div>
 
-    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
+    <ul class="country js-country-container"></ul>
+
     <script src="./index.js"></script>
   </body>
 </html>
