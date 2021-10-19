@@ -13,8 +13,6 @@ function onSearch(event) {
   renderCountries(query);
 }
 
-const BASE_URL = 'https://restcountries.com/v2';
-
 function renderCountries(searchQuery) {
   fetchCountries(searchQuery).then(countries => {
     if (countries.length === 1) {
