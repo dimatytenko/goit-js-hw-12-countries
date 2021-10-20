@@ -16,7 +16,7 @@ refs.input.addEventListener('input', debounce(onSearch, 500));
 function onSearch(event) {
   const query = event.target.value;
   if (query === '') {
-    refs.cardContainer.innerHTML = '';
+    toClearsPage();
     return;
   }
   renderCountries(query);
@@ -53,6 +53,11 @@ function notFound() {
   error({
     text: 'Not Found!',
     delay: 2000,
+    width: 300,
   });
+  toClearsPage();
+}
+
+function toClearsPage() {
   refs.cardContainer.innerHTML = '';
 }
