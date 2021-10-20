@@ -46,14 +46,12 @@ function tooManyMatches() {
   error({
     text: 'Too many matches found. Please enter a more specific query!',
     delay: 2000,
-    width: 300,
   });
 }
 function notFound() {
   error({
     text: 'Not Found!',
     delay: 2000,
-    width: 300,
   });
   toClearsPage();
 }
